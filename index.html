@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Intro component with sign up form</title>
+ 
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+  <link rel="stylesheet" href="style.css">
+  <!-- <script src="https://kit.fontawesome.com/bb36fc0025.js" crossorigin="anonymous"></script> -->
+  
+</head>
+<body>
+  <main>
+        <div class="card">
+          <div class="card__uno">
+            <h1 class="card__uno-titulo">Learn to code by <br> watching others</h1>
+            <p class="card__uno-parrafo">See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+               but understanding how developers think is invaluable.</p>
+          </div>
+          <div class="card__dos">
+            <div class="card__dos-oferta"><span>Try it free 7 days</span>  then $20/mo. thereafter</div>
+            <form action="" class="card__formulario" id="card__formulario">
+              <div class="card__formulario-grupo" id="card__formulario-nombre">
+                <input type="text" class="card__formulario-input" name="nombre" id="nombre" placeholder="First Name">
+                 <img class="card_formulario-iconoError" src="images/icon-error.svg" alt="">
+                 <p class="card__formulario-mensajeError">First Name cannot be empty</p>
+              </div>
+              <div class="card__formulario-grupo" id="card__formulario-apellido">
+                <input type="text" class="card__formulario-input" name="apellido" id="apellido" placeholder="Last Name">
+                 <img class="card_formulario-iconoError" src="images/icon-error.svg" alt="">
+                 <p class="card__formulario-mensajeError">Last Name cannot be empty</p>
+              </div>
+              <div class="card__formulario-grupo" id="card__formulario-correo">
+                <input type="email" class="card__formulario-input" name="correo" id="correo" placeholder="Email Address">
+                 <img class="card_formulario-iconoError" src="images/icon-error.svg" alt="">
+                 <p class="card__formulario-mensajeError">Looks like this is not an email</p>
+              </div>
+              <div class="card__formulario-grupo" id="card__formulario-password">
+                <input type="password" class="card__formulario-input" name="password" id="password" placeholder="Password">
+                 <img class="card_formulario-iconoError" src="images/icon-error.svg" alt="">
+                 <p class="card__formulario-mensajeError">Password cannot be empty</p>
+              </div>
+              <div class="card__formulario-grupo card__formulario-btn">
+                <button type="submit" class="card__btn-enviar">Claim your free trial </button>
+                <p class="card__completarTodo" id="card__completarTodo">Complete All Items</p>
+                <p class="card__formulario-mensaje-btn">By clicking the button, you are agreeing to our <a href="#">Terms and Services</a></p>
+              </div>
+            </form>
+            
+          </div>
+        </div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

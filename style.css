@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+*{
+    box-sizing: border-box;
+}
+
+:root{
+    --fuente:'Poppins', sans-serif ;
+    
+/* Primary */
+--Red: hsl(0, 100%, 74%) ;
+--Green: hsl(154, 59%, 51%);
+
+/* Accent */
+--Blue: hsl(248, 32%, 49%);
+
+/* Neutral */
+--DarkBlue: hsl(249, 10%, 26%) ;
+--GrayishBlue: hsl(246, 25%, 77%);
+}
+
+body{
+    font-family: var(--fuente);
+    font-size: 16px;
+}
+main{
+    background-color: var(--Red);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(images/bg-intro-desktop.png);
+    
+}
+.card{
+    width: 1090px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+/* ------------- */
+.card__uno{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.card__uno-titulo{
+    color: #fff;
+    line-height: 1.1;
+    font-weight: 700;
+    font-size: 3em;
+}
+.card__uno-parrafo{
+    color: #fff;
+    line-height: 1.5;
+}
+/* ------------------ */
+.card__dos{
+    text-align: center;
+}
+.card__dos-oferta{
+    background-color: var(--Blue);
+    color: var(--GrayishBlue);
+    padding: 15px 0;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.3);
+}
+.card__dos-oferta span{
+    color: #fff;
+    font-weight: 600;
+}
+.card__formulario{
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
+}
+.card__formulario-grupo{
+    position: relative;
+    margin-bottom: 15px;
+
+}
+.card__formulario-input{
+    width: 100%;
+    padding: 15px 25px;
+    border-radius: 5px;
+    margin-bottom: 5px ;
+    border: 1px solid var(--GrayishBlue);
+    font-weight: 600;
+}
+.card__formulario-input:focus{
+   outline: none;
+   border: 2px solid var(--DarkBlue);
+   color: var(--DarkBlue);
+   
+}
+
+.card_formulario-iconoError{
+    position: absolute;
+    top: 13px;
+    right: 25px;
+    opacity: 0;
+}
+.card__formulario-mensajeError{
+    margin: 0 0 20px 0;
+    text-align: end;
+    font-size: 0.8em;
+    color: var(--Red);
+    display: none;
+}
+
+.card__btn-enviar{
+    width: 100%;
+    padding: 15px 0;
+    background-color: var(--Green);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 5px;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.5s ease-out;
+}
+.card__btn-enviar:hover{
+    background-color: hsl(154, 65%, 68%);
+
+}
+.card__formulario-mensaje-btn{
+    font-size: .7em;
+    color: var(--GrayishBlue);
+}
+.card__formulario-mensaje-btn a{
+    color: var(--Red);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* validaciones */
+
+.activo .card_formulario-iconoError{
+    opacity: 1;
+}
+.activo .card__formulario-mensajeError{
+    display: block;
+}
+.activo .card__formulario-input{
+    border: 2px solid var(--Red);
+}
+
+.card__completarTodo{
+    color: var(--Red);
+    display: none;
+}
+.card__completarTodo-activo{
+    display: block;
+}
+
+@media (max-width:1100px){
+
+    main{
+        height: auto;
+    }
+    .card {
+      grid-template-columns:  1fr;
+      margin: 50px;
+      text-align: center;
+    }  
+}
+
+  @media (max-width:510px){
+    body{
+        font-size: 10px;
+    }
+}
